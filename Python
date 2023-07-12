@@ -1,0 +1,103 @@
+def _upload():
+_upload_widget = fileupload.FileUploadwidget()
+def
+cb(change):
+global file contents
+decoded = io.StringIO(change [ 'owner*].data.decode('utf-8*))
+filename = change('owner ']. filename
+print('Uploaded
+*()° ((:.2f) kB)'.format(
+filename, len(decoded.read()) / 2 **10))
+file_contents = decoded. get value()
+upload widget.observe(_cb, names='data')
+display (_upload _widget)
+_upload()
+def calculate_frequencies (file_contents):
+# Here is a list of punctuations and uninteresting words you can use to process your text
+punctuations =
+uninteresting words = ("the"
+"a"
+"to", "if
+"we"
+"our"
+"you",
+"Which"
+'your"
+"§s"
+"it",
+"of"
+"and". "or"
+"an"
+"as" wit
+"me"
+"my"
+, "yours",
+"he"
+"she"
+"him"
+"his"
+"her"
+"hers®
+"its"
+"their"
+"what"
+"were"
+"they"
+"who", "whom",
+"this.
+"that"
+"am",
+"are".
+"was"
+"have",
+"has"
+"does"
+'be", "been",
+"them"
+)
+"being", 1
+"did", "but.
+"at"
+"by"
+"with"
+"from"
+"here'
+Falls
+"any'
+"when"
+"where"
+"both"
+"each"
+"Few"
+can"
+"how",
+"more'
+"some'
+"such'
+"по"
+"nor",
+"too",
+"very"
+"will'
+"just")
+# LEARNER CODE START HERE
+dic=()
+p=file_contents.split(" ")
+for word in p:
+kora
+for c in word:
+if c not in punctuation:
+worEwor+C
+if wor not in uninteresting words:
+1f wor not in dickeys():
+dic[worl=1 else:
+dic[wor]+=1
+#worde loud
+cloud = word cloud.Wordcloud ()
+cloud. generate from frequencies (dic)
+return cloud.to array ()
+a Display your word cloud image
+my image = calculate_ frequencies (file contents)
+pit. imshow (my image, interpolation = 'nearest')
+pit. axis ('off')
+plt.show()
